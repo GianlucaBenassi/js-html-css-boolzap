@@ -59,6 +59,7 @@ body {
     color: #b1b1b1;
     font-size: 20px;
     margin: 8px;
+    cursor: pointer;
 }
 
 img {
@@ -165,6 +166,62 @@ img {
     width: 75%;
 }
 
+.col.right .chat {
+    background-image: url('../img/mine.jpg');
+    background-position: center;
+    height: calc(100% - 140px);
+    padding: 50px 70px 0;
+    overflow-y: auto;
+}
+
+.col.right .chat .row {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: right;
+}
+
+.chat .row .message {
+    max-width: 48%;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.chat .row .message .date {
+    color: #bbb;
+    font-size: 11px;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+
+.col.right .chat .row.send {
+    justify-content: right;
+}
+
+.chat .row.send .message {
+    background-color: #d5f9ba;
+}
+
+
+
+.col.right .chat .row.recived {
+    justify-content: left;
+}
+
+.chat .row.recived .message {
+    background-color: #fff;
+}
+
+
+
+
+
+.col.right .send-message {
+    background-color: #f3eeea;
+    height: 70px;
+}
 
 
 /* +++++ debug +++++ */
@@ -178,7 +235,7 @@ img {
     border: 1px solid black;
 } */
 
-.debug .col.right {
+/* .debug .col.right {
     background-color: red;
-    /* border: 1px solid black; */
-}
+    border: 1px solid black;
+} */
