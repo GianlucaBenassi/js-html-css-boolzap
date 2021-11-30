@@ -99,9 +99,8 @@ const app = new Vue({
             // only if text is not empty send the message
             if (this.newMessage != '') {
 
-                // ---------MANCA CALCOLO DATA DI INVIO MESSAGGIO----------
                 this.contacts[this.activeChat].messages.push({
-                    date: 'oggi',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     message: this.newMessage,
                     status: 'sent'
                 });
@@ -114,9 +113,8 @@ const app = new Vue({
         },
 
         replyMessage: function (index) {
-            // ---------MANCA CALCOLO DATA DI INVIO MESSAGGIO----------
             this.contacts[index].messages.push({
-                date: 'oggi',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 message: 'Ok',
                 status: 'received'
             });
