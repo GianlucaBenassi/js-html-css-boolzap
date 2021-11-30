@@ -132,13 +132,12 @@ input[type='text'] {
     display: flex;
 }
 
-.col.left .search button {
+.col.left .search i {
     color: #b1b1b1;
     background-color: #fff;
     border: 0;
     border-right: 1px solid #fafafa;
     padding: 10px 20px;
-    cursor: pointer;
 }
 
 .col.left .contacts .list {
@@ -184,6 +183,7 @@ input[type='text'] {
 .chat .row .message {
     min-width: 150px;
     max-width: 48%;
+    word-wrap: break-word;
     padding: 20px;
     border-radius: 10px;
     position: relative;

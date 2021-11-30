@@ -85,7 +85,8 @@ const app = new Vue({
             },
         ],
         activeChat: 0,
-        newMessage: ''
+        newMessage: '',
+        filterValue: ''
 
     },
 
@@ -118,7 +119,25 @@ const app = new Vue({
                 message: 'Ok',
                 status: 'received'
             });
+        },
+
+        filterList: function(element) {
+
+            if (this.filterValue == '') {
+
+                return true;
+                
+            } else {
+
+                const lowElName = element.name.toLowerCase();
+                const lowFilter = this.filterValue.toLowerCase();
+
+                return lowElName.includes(lowFilter);
+
+            }
+
         }
+
 
     }
 

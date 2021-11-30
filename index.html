@@ -56,14 +56,14 @@
 
                 <!-- search -->
                 <div class="search">
-                    <button><i class="fas fa-search"></i></button>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="filterValue">
                 </div>
 
                 <!-- list -->
                 <div class="list">
 
-                    <div class="row" v-for="(contact, i) in contacts" :class="activeChat == i ? 'active' : ''" @click="changeActive(i)">
+                    <div class="row" v-for="(contact, i) in contacts" :class="activeChat == i ? 'active' : ''" @click="changeActive(i)" v-show="filterList(contact)">
                         <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="'avatar' + contact.avatar">
                         <span>{{contact.name}}</span>
                     </div>
