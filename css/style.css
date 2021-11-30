@@ -45,9 +45,14 @@ body {
     margin-right: 5px;
 }
 
-img {
-    height: 100%;
-    border-radius: 50%;
+.top .avatar .infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.top .avatar .last-logon {
+    color: #aaa;
+    font-size: 12px;
 }
 
 .top .icons i {
@@ -56,6 +61,10 @@ img {
     margin: 8px;
 }
 
+img {
+    height: 100%;
+    border-radius: 50%;
+}
 
 .active {
     background-color: #e9ebeb;
@@ -67,7 +76,6 @@ img {
 
 .col.left {
     width: 35%;
-    border-right: 1px solid #ddd;
 }
 
 .col.left .notifications {
