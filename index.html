@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
-<body class="debug">
+<body>
     
     <div class="container" id="root">
 
@@ -63,17 +63,9 @@
                 <!-- list -->
                 <div class="list">
 
-                    <div class="row active">
-                        <img src="img/avatar_1.jpg" alt="avatar_1">
-                        <span>Michele</span>
-                    </div>
-                    <div class="row">
-                        <img src="img/avatar_1.jpg" alt="avatar_1">
-                        <span>Michele</span>
-                    </div>
-                    <div class="row">
-                        <img src="img/avatar_1.jpg" alt="avatar_1">
-                        <span>Michele</span>
+                    <div class="row" v-for="(contact, i) in contacts" :class="activeChat == i ? 'active' : ''">
+                        <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="'avatar' + contact.avatar">
+                        <span>{{contact.name}}</span>
                     </div>
 
                 </div>
