@@ -7,6 +7,7 @@
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
     height: 100vh;
     background: rgb(0,150,136);
     background: linear-gradient(180deg, rgba(0,150,136,1) 0%, rgba(0,150,136,1) 15%, rgba(220,219,209,1) 15%, rgba(210,219,219,1) 100%);
@@ -23,36 +24,66 @@ body {
     display: flex;
 }
 
+.top {
+    height: 70px;
+    background-color: #eaeaea;
+    padding: 10px;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top .avatar {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.top .avatar img {
+    margin-right: 5px;
+}
+
+img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.top .icons i {
+    color: #b1b1b1;
+    font-size: 20px;
+    margin: 8px;
+}
 
 /* ***** left column ***** */
 
 .col.left {
-    width: 30%;
+    width: 35%;
+    border-right: 1px solid #ddd;
 }
-
 
 
 /* ***** right column ***** */
 
 .col.right {
-    width: 70%;
+    width: 75%;
 }
 
 
 
 /* +++++ debug +++++ */
 
-.debug .container {
+/* .debug .container {
     background-color: blue;
-}
+} */
 
 .debug .col.left {
     background-color: green;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .debug .col.right {
     background-color: red;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
