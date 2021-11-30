@@ -99,6 +99,7 @@ const app = new Vue({
             // only if text is not empty send the message
             if (this.newMessage != '') {
 
+                // ---------MANCA CALCOLO DATA DI INVIO MESSAGGIO----------
                 this.contacts[this.activeChat].messages.push({
                     date: 'oggi',
                     message: this.newMessage,
@@ -107,7 +108,18 @@ const app = new Vue({
 
                 this.newMessage = '';
 
+                setTimeout(this.replyMessage, 1000, this.activeChat);
+
             }
+        },
+
+        replyMessage: function (index) {
+            // ---------MANCA CALCOLO DATA DI INVIO MESSAGGIO----------
+            this.contacts[index].messages.push({
+                date: 'oggi',
+                message: 'Ok',
+                status: 'received'
+            });
         }
 
     }
