@@ -84,7 +84,8 @@ const app = new Vue({
                 ],
             },
         ],
-        activeChat: 0
+        activeChat: 0,
+        newMessage: ''
 
     },
 
@@ -92,6 +93,21 @@ const app = new Vue({
 
         changeActive: function (index) {
             this.activeChat = index;
+        },
+
+        sendMessage: function () {
+            // only if text is not empty send the message
+            if (this.newMessage != '') {
+
+                this.contacts[this.activeChat].messages.push({
+                    date: 'oggi',
+                    message: this.newMessage,
+                    status: 'sent'
+                });
+
+                this.newMessage = '';
+
+            }
         }
 
     }
