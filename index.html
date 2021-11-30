@@ -63,7 +63,7 @@
                 <!-- list -->
                 <div class="list">
 
-                    <div class="row" v-for="(contact, i) in contacts" :class="activeChat == i ? 'active' : ''">
+                    <div class="row" v-for="(contact, i) in contacts" :class="activeChat == i ? 'active' : ''" @click="changeActive(i)">
                         <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="'avatar' + contact.avatar">
                         <span>{{contact.name}}</span>
                     </div>
