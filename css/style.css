@@ -11,3 +11,48 @@ body {
     background: rgb(0,150,136);
     background: linear-gradient(180deg, rgba(0,150,136,1) 0%, rgba(0,150,136,1) 15%, rgba(220,219,209,1) 15%, rgba(210,219,219,1) 100%);
 }
+
+.container {
+    width: 80%;
+    height: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+}
+
+
+
+/* ***** left column ***** */
+
+.col.left {
+    width: 30%;
+}
+
+
+
+/* ***** right column ***** */
+
+.col.right {
+    width: 70%;
+}
+
+
+
+/* +++++ debug +++++ */
+
+.debug .container {
+    background-color: blue;
+}
+
+.debug .col.left {
+    background-color: green;
+    border: 1px solid black;
+}
+
+.debug .col.right {
+    background-color: red;
+    border: 1px solid black;
+}
