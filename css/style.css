@@ -228,6 +228,7 @@ input[type='text'] {
     color: #6b7376;
     font-size: 22px;
     margin: 20px;
+    cursor: pointer;
 }
 
 

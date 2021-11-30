@@ -82,9 +82,9 @@
             <div class="top">
 
                 <div class="avatar">
-                    <img src="img/avatar_1.jpg" alt="chat avatar_1">
+                    <img :src="'img/avatar' + contacts[activeChat].avatar + '.jpg'" alt="chat avatar_1">
                     <div class="infos">
-                        <span>Michele</span>
+                        <span>{{contacts[activeChat].name}}</span>
                         <span class="last-logon">Ultimo accesso oggi alle</span>
                     </div>
                 </div>
