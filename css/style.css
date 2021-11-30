@@ -57,6 +57,11 @@ img {
 }
 
 
+.active {
+    background-color: #e9ebeb;
+}
+
+
 
 /* ***** left column ***** */
 
@@ -67,6 +72,7 @@ img {
 
 .col.left .notifications {
     background-color: #8edafc;
+    height: 80px;
     padding: 15px;
 
     display: flex;
@@ -97,6 +103,52 @@ img {
     font-size: 12px;
 }
 
+.col.left .contacts {
+    height: calc(100% - 150px);
+    display: flex;
+    flex-direction: column;
+}
+
+.col.left .search {
+    background-color: #fafafa;
+    padding: 5px;
+
+    display: flex;
+}
+
+.col.left .search button {
+    color: #b1b1b1;
+    background-color: #fff;
+    border: 0;
+    border-right: 1px solid #fafafa;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#search-text {
+    border: 0;
+
+    flex-grow: 1;
+}
+
+.col.left .contacts .list {
+    background-color: #fff;
+    overflow-y: auto;
+
+    flex-grow: 1;
+}
+
+.col.left .list .row {
+    height: 80px;
+    border-top: 1px solid #fafafa;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.col.left .list .row span {
+    vertical-align: top;
+    margin-left: 10px;
+}
 
 
 /* ***** right column ***** */
@@ -113,10 +165,10 @@ img {
     background-color: blue;
 } */
 
-.debug .col.left {
+/* .debug .col.left {
     background-color: green;
-    /* border: 1px solid black; */
-}
+    border: 1px solid black;
+} */
 
 .debug .col.right {
     background-color: red;
