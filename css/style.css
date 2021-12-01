@@ -191,6 +191,7 @@ input[type='text'] {
     width: 50px;
     height: 50px;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .col.right .clip-menu ul li a {
@@ -205,6 +206,23 @@ input[type='text'] {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.col.right .clip-menu .tag {
+    background-color: #fff;
+    font-size: 14px;
+    white-space: nowrap;
+    border-radius: 15px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translate(0, -50%);
+    display: none;
+}
+
+.col.right .clip-menu li:hover .tag {
+    display: block;
 }
 
 .col.right .clip-menu ul li .fa-image {
@@ -226,7 +244,6 @@ input[type='text'] {
 .col.right .clip-menu ul li .fa-user {
     background: linear-gradient(180deg, rgba(7,149,220,1) 0%, rgba(7,149,220,1) 50%, rgba(14,171,244,1) 50%, rgba(14,171,244,1) 100%);
 }
-
 
 
 .list-enter-active, .list-leave-active {
