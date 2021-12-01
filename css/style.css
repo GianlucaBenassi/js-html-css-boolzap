@@ -226,6 +226,18 @@ input[type='text'] {
 .col.right .clip-menu ul li .fa-user {
     background: linear-gradient(180deg, rgba(7,149,220,1) 0%, rgba(7,149,220,1) 50%, rgba(14,171,244,1) 50%, rgba(14,171,244,1) 100%);
 }
+
+
+
+.list-enter-active, .list-leave-active {
+    transition: all .5s;
+}
+
+.list-enter, .list-leave-to {
+    opacity: 0;
+
+}
+
 /* end clip menu */
 
 
