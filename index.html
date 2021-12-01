@@ -91,7 +91,19 @@
 
                 <div class="icons">
                     <i class="fas fa-search"></i>
-                    <i class="fas fa-paperclip"></i>
+
+                    <!-- clip menu -->
+                    <div class="clip-menu">
+                        <i class="fas fa-paperclip" @click="clipMenu = !clipMenu"></i>
+                        <ul v-show="clipMenu">
+                            <li><a href="#"><i class="fas fa-image"></i></a></li>
+                            <li><a href="#"><i class="fas fa-sticky-note"></i></a></li>
+                            <li><a href="#"><i class="fas fa-camera"></i></a></li>
+                            <li><a href="#"><i class="fas fa-file"></i></a></li>
+                            <li><a href="#"><i class="fas fa-user"></i></a></li>
+                        </ul>
+                    </div>
+
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
 

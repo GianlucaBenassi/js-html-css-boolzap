@@ -86,7 +86,8 @@ const app = new Vue({
         ],
         activeChat: 0,
         newMessage: '',
-        filterValue: ''
+        filterValue: '',
+        clipMenu: false
 
     },
 
@@ -137,7 +138,6 @@ const app = new Vue({
             }
 
         }
-
 
     }
 
