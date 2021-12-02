@@ -87,7 +87,9 @@ const app = new Vue({
         activeChat: 0,
         newMessage: '',
         filterValue: '',
-        clipMenu: false
+        clipMenu: false,
+        menuOptionL: false,
+        menuOptionR: false
 
     },
 
@@ -135,6 +137,29 @@ const app = new Vue({
 
                 return lowElName.includes(lowFilter);
 
+            }
+
+        },
+
+        openMenu: function(menuName) {
+            
+            switch (menuName) {
+                case 'option-menu-l':
+                    this.menuOptionL = !this.menuOptionL;
+                    this.menuOptionR = false;
+                    this.clipMenu = false;
+                    break;
+
+                case 'option-menu-r':
+                    this.menuOptionL = false;
+                    this.menuOptionR = !this.menuOptionR;
+                    this.clipMenu = false;
+                    break;
+
+                case 'clip-menu':
+                    this.menuOptionL = false;
+                    this.menuOptionR = false;
+                    this.clipMenu = !this.clipMenu;
             }
 
         }

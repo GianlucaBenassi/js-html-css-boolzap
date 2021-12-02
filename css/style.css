@@ -55,6 +55,10 @@ body {
     font-size: 12px;
 }
 
+.top .icons {
+    display: flex;
+}
+
 .top .icons i {
     color: #b1b1b1;
     font-size: 20px;
@@ -79,6 +83,38 @@ input[type='text'] {
 }
 
 
+/* menus */
+.clip-menu,
+.option-menu {
+    position: relative;
+}
+
+.clip-menu ul,
+.option-menu ul {
+    list-style: none;
+    position: absolute;
+    z-index: 1;
+}
+
+/* option menus */
+.option-menu ul {
+    top: 45px;
+    right: 0px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.option-menu ul li:hover {
+    background-color: #eee;
+}
+
+.option-menu ul li a {
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 10px;
+    display: block;
+}
 
 /* ***** left column ***** */
 
@@ -169,22 +205,11 @@ input[type='text'] {
 }
 
 
-.col.right .top .icons {
-    display: flex;
-}
-
-
 /* clip menu */
-.col.right .clip-menu {
-    position: relative;
-}
 
 .col.right .clip-menu ul {
-    list-style: none;
-    position: absolute;
     top: 40px;
     right: 0;
-    z-index: 1;
 }
 
 .col.right .clip-menu ul li {

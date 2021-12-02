@@ -34,7 +34,19 @@
                 <div class="icons">
                     <i class="fas fa-circle-notch"></i>
                     <i class="fas fa-comment-alt"></i>
-                    <i class="fas fa-ellipsis-v"></i>
+
+                    <!-- option menu -->
+                    <div class="option-menu">
+                        <i class="fas fa-ellipsis-v" @click="openMenu('option-menu-l')"></i>
+                        <ul v-show="menuOptionL">
+                            <li><a href="#">Nuovo gruppo</a></li>
+                            <li><a href="#">Archiviate</a></li>
+                            <li><a href="#">Messaggi importanti</a></li>
+                            <li><a href="#">Impostazioni</a></li>
+                            <li><a href="#">Disconnetti</a></li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>
@@ -94,7 +106,7 @@
 
                     <!-- clip menu -->
                     <div class="clip-menu">
-                        <i class="fas fa-paperclip" @click="clipMenu = !clipMenu"></i>
+                        <i class="fas fa-paperclip" @click="openMenu('clip-menu')"></i>
                         <transition name="list">
                             <ul v-show="clipMenu">
 
@@ -127,7 +139,17 @@
                         </transition>
                     </div>
 
-                    <i class="fas fa-ellipsis-v"></i>
+                    <div class="option-menu">
+                        <i class="fas fa-ellipsis-v" @click="openMenu('option-menu-r')"></i>
+                        <ul v-show="menuOptionR">
+                            <li><a href="#">Info contatto</a></li>
+                            <li><a href="#">Seleziona messaggi</a></li>
+                            <li><a href="#">Chiudi chat</a></li>
+                            <li><a href="#">Disattiva notifiche</a></li>
+                            <li><a href="#">Elimina messaggi</a></li>
+                            <li><a href="#">Elimina chat</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
