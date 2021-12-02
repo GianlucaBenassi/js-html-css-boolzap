@@ -116,6 +116,9 @@ const app = new Vue({
 
                 this.newMessage = '';
 
+                // close all menus
+                this.openMenu();
+
                 setTimeout(this.replyMessage, 1000, this.activeChat);
 
             }
