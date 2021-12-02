@@ -62,7 +62,8 @@ body {
 .top .icons i {
     color: #b1b1b1;
     font-size: 20px;
-    margin: 8px;
+    margin: 5px;
+    padding: 8px;
     cursor: pointer;
 }
 
@@ -94,6 +95,14 @@ input[type='text'] {
     list-style: none;
     position: absolute;
     z-index: 1;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: all .5s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
 }
 
 /* option menus */
@@ -269,17 +278,6 @@ input[type='text'] {
 .col.right .clip-menu ul li .fa-user {
     background: linear-gradient(180deg, rgba(7,149,220,1) 0%, rgba(7,149,220,1) 50%, rgba(14,171,244,1) 50%, rgba(14,171,244,1) 100%);
 }
-
-
-.list-enter-active, .list-leave-active {
-    transition: all .5s;
-}
-
-.list-enter, .list-leave-to {
-    opacity: 0;
-
-}
-
 /* end clip menu */
 
 
