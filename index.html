@@ -104,7 +104,10 @@
                 </div>
 
                 <div class="icons">
-                    <i class="fas fa-search"></i>
+
+                    <!-- search message -->
+                    <input type="text" placeholder="Cerca un messaggio" v-show="messageSearch">
+                    <i class="fas fa-search" @click="openMenu('search')"></i>
 
                     <!-- clip menu -->
                     <div class="clip-menu">
