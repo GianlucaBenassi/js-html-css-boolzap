@@ -87,6 +87,7 @@ const app = new Vue({
         activeChat: 0,
         newMessage: '',
         filterValue: '',
+        filterMessage: '',
         clipMenu: false,
         menuOptionL: false,
         menuOptionR: false,
@@ -98,6 +99,9 @@ const app = new Vue({
 
         changeActive: function (index) {
             this.activeChat = index;
+
+            // close all menus
+            this.openMenu();
         },
 
         sendMessage: function () {
@@ -142,6 +146,23 @@ const app = new Vue({
 
         },
 
+        filterMessageList: function(messText) {
+
+            if (this.filterMessage == '') {
+
+                return true;
+                
+            } else {
+
+                const lowMess = messText.toLowerCase();
+                const lowFilter = this.filterMessage.toLowerCase();
+
+                return lowMess.includes(lowFilter);
+
+            }
+            
+        },
+
         openMenu: function(menuName) {
             
             switch (menuName) {
@@ -149,27 +170,43 @@ const app = new Vue({
                     this.menuOptionL = !this.menuOptionL;
                     this.menuOptionR = false;
                     this.clipMenu = false;
-                    this.messageSearch = false;
+                    if (this.filterMessage == '') {
+                        this.messageSearch = false;
+                    }
                     break;
 
                 case 'option-menu-r':
                     this.menuOptionL = false;
                     this.menuOptionR = !this.menuOptionR;
                     this.clipMenu = false;
-                    this.messageSearch = false;
+                    if (this.filterMessage == '') {
+                        this.messageSearch = false;
+                    }
                     break;
 
                 case 'clip-menu':
                     this.menuOptionL = false;
                     this.menuOptionR = false;
                     this.clipMenu = !this.clipMenu;
-                    this.messageSearch = false;
+                    if (this.filterMessage == '') {
+                        this.messageSearch = false;
+                    }
                     break;
+
                 case 'search':
                     this.menuOptionL = false;
                     this.menuOptionR = false;
                     this.clipMenu = false;
                     this.messageSearch = !this.messageSearch;
+                    this.filterMessage = "";
+                    break;
+
+                default:
+                    this.menuOptionL = false;
+                    this.menuOptionR = false;
+                    this.clipMenu = false;
+                    this.messageSearch = false;
+                    this.filterMessage = '';
             }
 
         }

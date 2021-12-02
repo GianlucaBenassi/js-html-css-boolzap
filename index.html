@@ -107,7 +107,7 @@
 
                     <!-- search message -->
                     <transition name="slide-fade">
-                        <input type="text" placeholder="Cerca un messaggio" v-show="messageSearch">
+                        <input type="text" placeholder="Cerca un messaggio" v-show="messageSearch" v-model="filterMessage">
                     </transition>
                     <i class="fas fa-search" @click="openMenu('search')"></i>
 
@@ -168,7 +168,7 @@
             <!-- chat -->
             <div class="chat">
 
-                <div class="row" v-for="message in contacts[activeChat].messages" :class="message.status">
+                <div class="row" v-for="message in contacts[activeChat].messages" :class="message.status" v-show="filterMessageList(message.message)">
                     <div class="message">
                         <span>{{message.message}}</span>
                         <span class="date">{{message.date}}</span>
