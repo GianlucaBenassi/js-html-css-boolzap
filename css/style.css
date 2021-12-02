@@ -101,14 +101,6 @@ input[type='text'] {
     z-index: 1;
 }
 
-.fade-enter-active, .fade-leave-active {
-    transition: all .5s;
-}
-
-.fade-enter, .fade-leave-to {
-    opacity: 0;
-}
-
 /* option menus */
 .option-menu ul {
     top: 45px;
@@ -127,6 +119,26 @@ input[type='text'] {
     white-space: nowrap;
     padding: 10px;
     display: block;
+}
+
+/* fade transition */
+.fade-enter-active, .fade-leave-active {
+    transition: all .5s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+/* slide-fade transition */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+    transition: all .3s;
+}
+
+.slide-fade-enter, .slide-fade-leave-to{
+    transform: translateX(40px);
+    opacity: 0;
 }
 
 /* ***** left column ***** */

@@ -106,7 +106,9 @@
                 <div class="icons">
 
                     <!-- search message -->
-                    <input type="text" placeholder="Cerca un messaggio" v-show="messageSearch">
+                    <transition name="slide-fade">
+                        <input type="text" placeholder="Cerca un messaggio" v-show="messageSearch">
+                    </transition>
                     <i class="fas fa-search" @click="openMenu('search')"></i>
 
                     <!-- clip menu -->
